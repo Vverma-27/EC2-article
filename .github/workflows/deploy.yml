@@ -36,7 +36,7 @@ jobs:
         id: deploy
         run: |
           aws deploy create-deployment \
-          --application-name trial-2 \
-          --deployment-group-name trial-2 \
+          --application-name My-Codedeploy-App \
+          --deployment-group-name My-Codedeploy-Deployment-Group \
           --deployment-config-name CodeDeployDefault.AllAtOnce \
           --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
